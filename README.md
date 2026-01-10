@@ -17,5 +17,5 @@ yarn format
 ## Run tests
 
 ```
-yarn test
+yarn test. This is a simple test on 8th Jan!!! 
 ```
