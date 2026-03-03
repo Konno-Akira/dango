@@ -10,7 +10,7 @@ type Props = Readonly<{
   countries: Array<Country>;
 }>;
 
-// 国名とつづり
+// 国名つづり
 const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
   const [count, setCount] = useState<number>(0);
   const [labourHours, setLabourHours] = useState<string>('0');
