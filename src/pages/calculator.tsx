@@ -65,9 +65,12 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
                 let num = 0;
-                if(num == 0){
-                  setCount(1); //1
-                }
+                //if(num == 0){
+                  num = num + 2;
+                  //console.log(count)
+                  setCount(num)
+                  //setCount(Number('${count} ${num}')); //1
+                //}
               }}
             >
               <span className="select-none text-xl">1</span>
@@ -75,7 +78,7 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                 let num = 0;
+                let num = 0;
                 if(num == 0){
                   setCount(2); //2
                 }
@@ -86,7 +89,7 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                 let num = 0;
+                let num = 0;
                 if(num == 0){
                   setCount(3); //3
                 }
@@ -98,6 +101,7 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
           </div>
         </div>
       </div>
+      // 勤務開始時間，勤務時間，労働時間
       <div className="m-10 p-4 w-2/3 mx-auto shadow-lg border-2 rounded-2xl">
         <div className="mx-auto">
           <div className="grid grid-cols-3 gap-2">
@@ -138,6 +142,8 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
           })}
         </ul>
       </div>
+      
+      //フォームで使いそうなもの
       <div className="m-10 p-4 w-2/3 mx-auto shadow-lg border-2 rounded-2xl">
         フォームで使いそうなもの
         <ul className="list-none">
