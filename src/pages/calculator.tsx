@@ -13,7 +13,7 @@ const IndexPage: NextPage = (): ReactElement => {
   // 最新の値
   const [operator, set_operator] = useState<string | null>(null);
 
-  const input_number = (num: string) => {
+  const latest_number = (num: string) => {
     if (display === "0") {
       set_display(num);
     } else {
@@ -21,29 +21,30 @@ const IndexPage: NextPage = (): ReactElement => {
     }
   };
 
-  const input_operator = (op: string) => {
+  const latest_operator = (op: string) => {
     set_latest(Number(display));
     set_operator(op);
     set_display("0");
   };
 
-  cosnt calculate = () => {
-    if (latest === null || operator === null) return;
+  const calculate = () => {
+    if (latest === null || operator === null)
+      return;
 
-    const current_number = Number(display);
+    const display_number = Number(display);
     let result = 0;
 
     if (operator === "+") {
-      result = latest + current_number;
+      result = latest + display_number;
     }
-    if (oprator === "-") {
-      result = latest - current_number;
+    if (operator === "-") {
+      result = latest - display_number;
     }
-    if (oprator === "*") {
-      result = latest * current_number;
+    if (operator === "*") {
+      result = latest * display_number;
     }
-    if (oprator === "/") {
-      result = latest / current_number;
+    if (operator === "/") {
+      result = latest / display_number;
     }
 
     set_display(String(result));
@@ -53,7 +54,7 @@ const IndexPage: NextPage = (): ReactElement => {
 
   return (
       <div className="m-10 p-4 w-2/3 mx-auto shadow-lg border-2 rounded-2xl">
-        <div className="mx-auto">
+        // <div className="mx-auto">
           <div className="p-3 mb-3 border-2 rounded h-full w-full text-right">
             <span className="text-gray-700 select-none">{display}</span>
           </div>
@@ -62,20 +63,18 @@ const IndexPage: NextPage = (): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                console.log(display);
-                input_number("1"); //1の入力
+                latest_number("1"); //1の入力
               }}
             >
-              <span className="select-none text-xl">+</span>
+              <span className="select-none text-xl">1</span>
             </Button>
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                console.log(display);
-                input_number("2"); //2の入力
+                latest_number("2"); //2の入力
               }}
             >
-              <span className="select-none text-xl">-</span>
+              <span className="select-none text-xl">2</span>
             </Button>
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
@@ -88,19 +87,17 @@ const IndexPage: NextPage = (): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                input_operator("+"); //+演算子
+                latest_operator("+"); //+演算子
               }}
             >
-              +
-              <span className="select-none text-xl">1</span>
+              <span className="select-none text-xl">+</span>
             </Button>
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
-              onClick={clculate}
+              onClick={calculate}
             >
-              =
-              <span className="select-none text-xl">2</span>
-
+              <span className="select-none text-xl">=</span>
+            </Button>
           </div>
         </div>
       </div>
