@@ -98,7 +98,6 @@ const IndexPage: NextPage = (): ReactElement => {
               <span className="select-none text-xl">=</span>
             </Button>
           </div>
-        </div>
       </div>
   );
 };
