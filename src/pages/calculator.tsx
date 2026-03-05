@@ -5,18 +5,18 @@ import { Button } from '../components/Button';
 const IndexPage: NextPage = (): ReactElement => {
 
   // 電卓に表示される文字
-  const [display, set_display] = useState<string>(0);
+  const [display, set_display] = useState<string>("0");
 
   // 最新の値
   const [latest, set_latest] = useState<number | null>(null);
 
   // 最新の値
-  const [opetator, set_operator] = useState<string | null>(null);
+  const [operator, set_operator] = useState<string | null>(null);
 
   const input_number = (num: string) => {
     if (display === "0") {
       set_display(num);
-    } els {
+    } else {
       set_display(display + num);
     }
   };
@@ -33,7 +33,7 @@ const IndexPage: NextPage = (): ReactElement => {
     const current_number = Number(display);
     let result = 0;
 
-    if (oprator === "+") {
+    if (operator === "+") {
       result = latest + current_number;
     }
 
@@ -63,9 +63,9 @@ const IndexPage: NextPage = (): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                console.log(count);
+                console.log(display);
 
-                setCount(count + 1); //カウントアップ
+                setCount(NUmber(display) + 1); //カウントアップ
               }}
             >
               <span className="select-none text-xl">+</span>
@@ -73,9 +73,9 @@ const IndexPage: NextPage = (): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                console.log(count);
+                console.log(display);
 
-                setCount(count - 1); //カウントダウン
+                setCount(Number(display) - 1); //カウントダウン
               }}
             >
               <span className="select-none text-xl">-</span>
@@ -83,7 +83,7 @@ const IndexPage: NextPage = (): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                setCount(0); //クリア
+                set_display("0"); //クリア
               }}
             >
               <span className="select-none text-xl">C</span>
@@ -93,7 +93,7 @@ const IndexPage: NextPage = (): ReactElement => {
               onClick={() => {
                 let num = 0;
                   num = num + 2;
-                  setCount(num);
+                  set_display(num);
               }}
             >
               <span className="select-none text-xl">1</span>
@@ -103,7 +103,7 @@ const IndexPage: NextPage = (): ReactElement => {
               onClick={() => {
                 let num = 0;
                 if(num == 0){
-                  setCount(2); //2
+                  set_display(2); //2
                 }
               }}
             >
