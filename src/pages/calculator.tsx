@@ -4,7 +4,53 @@ import { Button } from '../components/Button';
 
 const IndexPage: NextPage = (): ReactElement => {
 
-  const [count, setCount] = useState<number>(0);
+  // 電卓に表示される文字
+  const [display, set_display] = useState<string>(0);
+
+  // 最新の値
+  const [latest, set_latest] = useState<number | null>(null);
+
+  // 最新の値
+  const [opetator, set_operator] = useState<string | null>(null);
+
+  const input_number = (num: string) => {
+    if (display === "0") {
+      set_display(num);
+    } els {
+      set_display(display + num);
+    }
+  };
+
+  const input_operator = (op: string) => {
+    set_latest(Number(display));
+    set_operator(op);
+    set_display("0");
+  };
+
+  cosnt calculate = () => {
+    if (latest === null || operator === null) return;
+
+    const current_number = Number(display);
+    let result = 0;
+
+    if (oprator === "+") {
+      result = latest + current_number;
+    }
+
+    if (oprator === "-") {
+      result = latest + current_number;
+    }
+    if (oprator === "*") {
+      result = latest + current_number;
+    }
+    if (oprator === "/") {
+      result = latest + current_number;
+    }
+
+    set_display(String(result));
+    set_latest(null);
+    set_operator(null);
+  };
 
   return (
       <div className="m-10 p-4 w-2/3 mx-auto shadow-lg border-2 rounded-2xl">
@@ -46,12 +92,8 @@ const IndexPage: NextPage = (): ReactElement => {
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
                 let num = 0;
-                //if(num == 0){
                   num = num + 2;
-                  //console.log(count)
-                  setCount(num)
-                  //setCount(Number('${count} ${num}')); //1
-                //}
+                  setCount(num);
               }}
             >
               <span className="select-none text-xl">1</span>
@@ -85,5 +127,4 @@ const IndexPage: NextPage = (): ReactElement => {
   );
 };
 
-// eslint-disable-next-line import/no-default-export
 export default IndexPage;
