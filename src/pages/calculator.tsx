@@ -38,13 +38,13 @@ const IndexPage: NextPage = (): ReactElement => {
     }
 
     if (oprator === "-") {
-      result = latest + current_number;
+      result = latest - current_number;
     }
     if (oprator === "*") {
-      result = latest + current_number;
+      result = latest * current_number;
     }
     if (oprator === "/") {
-      result = latest + current_number;
+      result = latest / current_number;
     }
 
     set_display(String(result));
@@ -65,7 +65,7 @@ const IndexPage: NextPage = (): ReactElement => {
               onClick={() => {
                 console.log(display);
 
-                setCount(NUmber(display) + 1); //カウントアップ
+                set_display(NUmber(display) + 1); //カウントアップ
               }}
             >
               <span className="select-none text-xl">+</span>
@@ -75,7 +75,7 @@ const IndexPage: NextPage = (): ReactElement => {
               onClick={() => {
                 console.log(display);
 
-                setCount(Number(display) - 1); //カウントダウン
+                set_display(Number(display) - 1); //カウントダウン
               }}
             >
               <span className="select-none text-xl">-</span>
