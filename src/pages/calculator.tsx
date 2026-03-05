@@ -2,12 +2,8 @@ import { NextPage } from 'next';
 import React, { ReactElement, useState } from 'react';
 import { Button } from '../components/Button';
 
-type Props = Readonly<{
-  countries: Array<Country>;
-}>;
-
-// 国名つづり
-const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
+const IndexPage: NextPage = (): ReactElement => {
+  
   const [count, setCount] = useState<number>(0);
 
   return (
