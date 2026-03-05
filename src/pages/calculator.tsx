@@ -56,7 +56,7 @@ const IndexPage: NextPage = (): ReactElement => {
       <div className="m-10 p-4 w-2/3 mx-auto shadow-lg border-2 rounded-2xl">
         <div className="mx-auto">
           <div className="p-3 mb-3 border-2 rounded h-full w-full text-right">
-            <span className="text-gray-700 select-none">{count}</span>
+            <span className="text-gray-700 select-none">{display}</span>
           </div>
           
           <div className="grid grid-cols-3 gap-2">
