@@ -3,7 +3,7 @@ import React, { ReactElement, useState } from 'react';
 import { Button } from '../components/Button';
 
 const IndexPage: NextPage = (): ReactElement => {
-  
+
   const [count, setCount] = useState<number>(0);
 
   return (
@@ -82,6 +82,7 @@ const IndexPage: NextPage = (): ReactElement => {
           </div>
         </div>
       </div>
+  );
 };
 
 // eslint-disable-next-line import/no-default-export
