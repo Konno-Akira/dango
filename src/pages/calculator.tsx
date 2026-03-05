@@ -62,7 +62,7 @@ const IndexPage: NextPage = (): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                latest_number("1"); //1の入力
+                latest_number("1");
               }}
             >
               <span className="select-none text-xl">1</span>
@@ -70,7 +70,7 @@ const IndexPage: NextPage = (): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                latest_number("2"); //2の入力
+                latest_number("2");
               }}
             >
               <span className="select-none text-xl">2</span>
@@ -78,7 +78,7 @@ const IndexPage: NextPage = (): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                set_display("0"); //クリア
+                set_display("0");
               }}
             >
               <span className="select-none text-xl">C</span>
@@ -86,7 +86,7 @@ const IndexPage: NextPage = (): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                latest_operator("+"); //+演算子
+                latest_operator("+");
               }}
             >
               <span className="select-none text-xl">+</span>
