@@ -114,7 +114,7 @@ const IndexPage: NextPage = (): ReactElement => {
               onClick={() => {
                 let num = 0;
                 if(num == 0){
-                  setCount(3); //3
+                  set_display(3); //3
                 }
               }}
             >
