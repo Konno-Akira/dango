@@ -36,7 +36,6 @@ const IndexPage: NextPage = (): ReactElement => {
     if (operator === "+") {
       result = latest + current_number;
     }
-
     if (oprator === "-") {
       result = latest - current_number;
     }
@@ -64,8 +63,7 @@ const IndexPage: NextPage = (): ReactElement => {
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
                 console.log(display);
-
-                set_display(NUmber(display) + 1); //カウントアップ
+                input_number("1"); //1の入力
               }}
             >
               <span className="select-none text-xl">+</span>
@@ -74,8 +72,7 @@ const IndexPage: NextPage = (): ReactElement => {
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
                 console.log(display);
-
-                set_display(Number(display) - 1); //カウントダウン
+                input_number("2"); //2の入力
               }}
             >
               <span className="select-none text-xl">-</span>
@@ -91,35 +88,18 @@ const IndexPage: NextPage = (): ReactElement => {
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
               onClick={() => {
-                let num = 0;
-                  num = num + 2;
-                  set_display(num);
+                input_operator("+"); //+演算子
               }}
             >
+              +
               <span className="select-none text-xl">1</span>
             </Button>
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
-              onClick={() => {
-                let num = 0;
-                if(num == 0){
-                  set_display(2); //2
-                }
-              }}
+              onClick={clculate}
             >
+              =
               <span className="select-none text-xl">2</span>
-            </Button>
-            <Button
-              className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"
-              onClick={() => {
-                let num = 0;
-                if(num == 0){
-                  set_display(3); //3
-                }
-              }}
-            >
-              <span className="select-none text-xl">3</span>
-            </Button>
 
           </div>
         </div>
