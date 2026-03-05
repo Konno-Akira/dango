@@ -86,11 +86,6 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
           </div>
         </div>
       </div>
-  return {
-    props: {
-      countries: JSON.parse(str) as Array<Country>
-    }
-  };
 };
 
 // eslint-disable-next-line import/no-default-export
