@@ -16,6 +16,7 @@ const IndexPage: NextPage = (): ReactElement => {
       set_display(display + "."); // 表示される文字に小数点を加える
     }
   };
+  // test
 
   // 入力が新しい数値かを判定
   const [check, set_check] = useState<boolean>(false);
