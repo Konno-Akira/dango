@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'; //変更
 import react from '@vitejs/plugin-react'; //追加
 import tailwindcss from '@tailwindcss/vite'; //追加
 
