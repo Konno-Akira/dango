@@ -17,6 +17,7 @@ const IndexPage: NextPage = (): ReactElement => {
     }
   };
 
+  
   // 入力が新しい数値かを判定
   const [check, set_check] = useState<boolean>(false);
   const latest_number = (num: string) => {
