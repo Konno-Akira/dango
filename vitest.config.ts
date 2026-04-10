@@ -1,7 +1,10 @@
 import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react'; //追加
+import tailwindcss from '@tailwindcss/vite'; //追加
 
 // eslint-disable-next-line import/no-default-export
 export default defineConfig({
+  plugins: [react(), tailwindcss()], //追加
   test: {
     include: [
       '**/*.spec.ts',
