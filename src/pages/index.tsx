@@ -141,7 +141,7 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const buffer = await promises.readFile(join(process.cwd(), 'json', 'countries.json'));
+  const buffer = await promises.readFile('json/country.json'); // から変更←readFile(join(process.cwd(), 'json', 'countries.json'));
   const str = buffer.toString();
 
   return {
