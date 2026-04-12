@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app.jsx';
 import React, { ReactElement } from 'react';
-import '../styles/globals.css';
-//import 'tailwindcss/tailwind.css';
+// import '../styles/globals.css';
+import 'tailwindcss/tailwind.css';
 
 const App = ({ Component, pageProps }: AppProps): ReactElement => {
   return (
