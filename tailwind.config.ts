@@ -3,7 +3,7 @@ import type { Config } from 'tailwindcss';
 // eslint-disable-next-line import/no-default-export
 export default {
    content: [
-     './src/pages/index.tsc', // 追加
+     // './src/pages/index.tsc', // 追加
      './src/**/*.{js,jsx,ts,tsx}',
    ],
    safelist: [],
