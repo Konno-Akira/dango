@@ -4,7 +4,7 @@ import { join } from 'path';
 import React, { ReactElement, useEffect, useState } from 'react';
 import { Button } from '../components/Button';
 import { CatImage } from '../components/CatImage';
-import { Country, RandomCat } from '../lib/Types.ts'; //'../lib/Types.js';
+import { Country, RandomCat } from '../lib/Types.js';
 
 type Props = Readonly<{
   countries: Array<Country>;
@@ -141,8 +141,8 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const res = buffer = await promises.readFile(join(process.cwd(), 'json', 'countries.json'));
-  const str = buffer.toString();
+  const res = await promises.readFile(join(process.cwd(), 'json', 'countries.json'));
+  const str = Buffer.toString();
 
   return {
     props: {
