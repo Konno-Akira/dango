@@ -4,7 +4,7 @@ import { join } from 'path';
 import React, { ReactElement, useEffect, useState } from 'react';
 import { Button } from '../components/Button';
 import { CatImage } from '../components/CatImage';
-import { Country, RandomCat } from '../lib/Types.js';
+import { Country, RandomCat } from '../lib/Types.ts'; //'../lib/Types.js';
 
 type Props = Readonly<{
   countries: Array<Country>;
