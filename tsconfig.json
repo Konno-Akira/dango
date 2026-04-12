@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
+
     /* Projects */
     "incremental": true,
     /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
@@ -40,9 +41,9 @@
       // "node",
     "baseUrl": "/.", // "src",// "./", から変更
     /* Specify the base directory to resolve non-relative module names. */
-      //"paths": { // 追加
-      //  "@/*": ["*"] //追加
-        "paths": {},  // }                                /* Specify a set of entries that re-map imports to additional lookup locations. */
+    // "paths": { // 追加
+    //   "@/*": ["*"] //追加
+        "paths": {},  // }                               /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
     "types": [
