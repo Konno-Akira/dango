@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitest/config'; //viteに変更
-//import react from '@vitejs/plugin-react'; //追加
+import react from '@vitejs/plugin-react'; //追加
 import tailwindcss from '@tailwindcss/vite'; //追加
 
 // eslint-disable-next-line import/no-default-export
