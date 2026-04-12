@@ -19,7 +19,6 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
     fetch('https://api.thecatapi.com/v1/images/search').then(async (res: Response) => {
       const json: Array<RandomCat> = await res.json() as Array<RandomCat>;
 
-      
       setCatImage(json[0]!);
     });
   }, []);
