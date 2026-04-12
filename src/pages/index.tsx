@@ -146,7 +146,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
-      countries // から変更2←: JSON.parse(str) as Array<Country>
+      JSON.parse(str) as Array<Country>
     }
   };
 };
