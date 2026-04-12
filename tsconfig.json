@@ -35,7 +35,7 @@
     /* Specify what module code is generated. */
     "rootDir": "./src",
     /* Specify the root folder within your source files. */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", // "bundler", から変更
     /* Specify how TypeScript looks up a file from a given module specifier. */
     "baseUrl": "src",// "./", から変更
     /* Specify the base directory to resolve non-relative module names. */
