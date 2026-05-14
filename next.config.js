@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: false,
-  turbopack: {}, // 追加
   webpack: (config, {isServer}) => {
     if (!isServer) {
       config.resolve.fallback = {
