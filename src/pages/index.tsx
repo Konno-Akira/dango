@@ -67,7 +67,7 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
           <div className="grid grid-cols-3 gap-2">
             <span className="text-gray-800 text-lg">勤務開始時間</span>
             <span className="text-gray-800 text-lg">勤務終了時間</span>
-            <span className="text-gray-800 text-lg">労働時間</span>
+            <span className="text-gray-800 text-lg">労働</span>
             <input
               className="py-2 px-3 border-2 rounded border-gray-200 cursor-text"
               type="text"
