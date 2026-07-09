@@ -24,12 +24,24 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
   }, []);
 
   return (
+    // 勤務時間計算 // ディスプレイ画面 //  // 列数
     <>
       <div className="m-10 p-4 w-2/3 mx-auto shadow-lg border-2 rounded-2xl">
         <div className="mx-auto">
           <div className="p-3 mb-3 border-2 rounded h-full w-full text-right">
             <span className="text-gray-700 select-none">{count}</span>
           </div>
+          
+      <div className="m-10 p-4 w-2/3 mx-auto shadow-lg border-2 rounded-2xl">
+        <div className="mx-auto">
+          <div className="grid grid-cols-3 gap-2">
+            <span className="text-gray-800 text-lg">開始時間</span>
+            <span className="text-gray-800 text-lg">終了時間</span>
+            <span className="text-gray-800 text-lg">労働時間</span>
+          </div>
+        </div>
+      </div>
+
           <div className="grid grid-cols-3 gap-2">
             <Button
               className="py-2 bg-cyan-600 text-white rounded border border-gray-200 cursor-pointer"

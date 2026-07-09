@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
-
     /* Projects */
     "incremental": true,
     /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
@@ -18,7 +17,7 @@
       "esnext"
     ],
     /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     /* Specify what JSX code is generated. */
     "experimentalDecorators": true,
     /* Enable experimental support for TC39 stage 2 draft decorators. */
@@ -34,16 +33,16 @@
     /* Modules */
     "module": "esnext",
     /* Specify what module code is generated. */
-   // 削除 → "rootDir": "./src",
+    // 削除 → "rootDir": "./src",
     /* Specify the root folder within your source files. */
-    "moduleResolution": "bundler", 
+    "moduleResolution": "bundler",
     /* Specify how TypeScript looks up a file from a given module specifier. */
-      // "node",
+    // "node",
     //"baseUrl": "./", // "src",// "./", から変更
     /* Specify the base directory to resolve non-relative module names. */
     // "paths": { // 追加
     //   "@/*": ["*"] //追加
-        "paths": {},  // }                               /* Specify a set of entries that re-map imports to additional lookup locations. */
+    "paths": {}, // }                               /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
     "types": [
