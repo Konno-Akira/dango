@@ -126,9 +126,9 @@ const IndexPage: NextPage<Props> = ({ countries }: Props): ReactElement => {
               value={0}
             >
               <option value={0}>選択してください</option>
-              <option value={1}>選択肢-1</option>
-              <option value={2}>選択肢-2</option>
-              <option value={3}>選択肢-3</option>
+              <option value={1}>選択肢1</option>
+              <option value={2}>選択肢2</option>
+              <option value={3}>選択肢3</option>
             </select>
           </li>
         </ul>
